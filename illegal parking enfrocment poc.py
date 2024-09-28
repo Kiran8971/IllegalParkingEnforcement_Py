@@ -1,4 +1,3 @@
-# ParkingIncident Class
 class ParkingIncident:
     def __init__(self, incident_id, vehicle_number, date, location, violation_type):
         self.incident_id = incident_id
@@ -11,7 +10,6 @@ class ParkingIncident:
         return f"ParkingIncident({self.incident_id}, {self.vehicle_number}, {self.date}, {self.location}, {self.violation_type})"
 
 
-# TowingOperation Class
 class TowingOperation:
     def __init__(self, operation_id, vehicle_number, date, location):
         self.operation_id = operation_id
@@ -23,14 +21,12 @@ class TowingOperation:
         return f"TowingOperation({self.operation_id}, {self.vehicle_number}, {self.date}, {self.location})"
 
 
-# Parking Enforcement System Class
 class ParkingEnforcementSystem:
     def __init__(self):
         self.parking_incidents = []
         self.towing_operations = []
 
-    # CRUD for ParkingIncident
-    def record_illegal_parking(self, incident):
+   def record_illegal_parking(self, incident):
         self.parking_incidents.append(incident)
 
     def get_parking_incident(self, incident_id):
@@ -53,7 +49,7 @@ class ParkingEnforcementSystem:
                 return True
         return False
 
-    # CRUD for TowingOperation
+  
     def manage_towing_operations(self, towing_op):
         self.towing_operations.append(towing_op)
 
@@ -78,7 +74,6 @@ class ParkingEnforcementSystem:
         return False
 
 
-# Unit Tests
 import unittest
 
 class TestParkingEnforcementSystem(unittest.TestCase):
